@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es6", // Configura el código de salida a ES6
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "jsx": "react-jsx", // Usar el modo JSX moderno (React 17+)
+        "moduleResolution": "node", // Resolución de módulos en estilo Node.js
+        "module": "esnext", // Usa módulos ES6
+        "strict": true, // Habilita todas las comprobaciones estrictas
+        "esModuleInterop": true, // Compatibilidad con módulos CommonJS
+        "skipLibCheck": true, // Omite comprobación de bibliotecas
+        "forceConsistentCasingInFileNames": true, // Fuerza consistencia en los nombres de archivo
+        "allowSyntheticDefaultImports": true, // Habilita importaciones sintéticas por defecto
+        "resolveJsonModule": true, // Permite importar archivos JSON
+        "noEmit": true, // Evita la salida de archivos (útil cuando usas otro compilador)
+        "isolatedModules": true // Asegura que cada archivo se compile de manera independiente
+    },
+    "include": [
+        "src" // Asegúrate de que todos los archivos de TypeScript estén dentro de "src"
+    ],
+    "exclude": [
+        "node_modules" // Excluye "node_modules" de la compilación
+    ]
+}
