@@ -37,6 +37,7 @@ const Calculator = () => {
           setResult(n1 / n2);
           break;
         }
+        break;
       default:
         setResult(null);
         break;

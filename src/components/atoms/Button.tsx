@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/atoms/button.scss";
 
 interface ButtonProps {
-  label: string;
+  children: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
   variant?: "primary" | "secondary" | "danger";
@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  label,
+  children,
   onClick,
   type = "button",
   variant = "primary",
@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       style={{ maxWidth }}
     >
-      {label}
+      {children}
     </button>
   );
 };

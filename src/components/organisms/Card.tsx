@@ -24,11 +24,9 @@ const Card: React.FC<CardProps> = ({
       <h4 className="card__title">{title}</h4>
       <p className="card__description">{description}</p>
       {buttonLabel && (
-        <Button
-          label={buttonLabel}
-          variant={buttonVariant}
-          onClick={onButtonClick}
-        />
+        <Button variant={buttonVariant} onClick={onButtonClick}>
+          {buttonLabel}
+        </Button>
       )}
     </div>
   );

@@ -1,11 +1,10 @@
-/* import Card from "../organisms/Card"; */
 import "../../styles/pages/aboutme.scss";
 import Card from "../organisms/Card";
 import { PERSONAL_INFO } from "../../data/data";
 
 const Home: React.FC = () => {
-  const handleButtonClick = () => {
-    alert("Card button clicked.");
+  const handleButtonClick = (buttonPressed: string) => {
+    alert(buttonPressed);
   };
 
   return (
@@ -16,10 +15,20 @@ const Home: React.FC = () => {
           {...PERSONAL_INFO[0]}
           buttonLabel="My Curriculum"
           buttonVariant="primary"
-          onButtonClick={handleButtonClick}
+          onButtonClick={() => handleButtonClick("my-cv")}
         />
-        <Card {...PERSONAL_INFO[1]} />
-        <Card {...PERSONAL_INFO[1]} />
+        {/* <Card
+          {...PERSONAL_INFO[1]}
+          buttonLabel="Work experience"
+          buttonVariant="primary"
+          onButtonClick={() => handleButtonClick("experience")}
+        />
+        <Card
+          {...PERSONAL_INFO[1]}
+          buttonLabel="Studies"
+          buttonVariant="primary"
+          onButtonClick={() => handleButtonClick("studies")}
+        /> */}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
-import '../../styles/pages/game.scss'
+import "../../styles/pages/game.scss";
 
-function Game() {
+const Game = () => {
   return <></>;
-}
+};
 
 export default Game;
