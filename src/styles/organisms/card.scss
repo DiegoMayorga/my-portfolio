@@ -12,7 +12,6 @@ $card-border: #ddd;
   border-radius: 8px;
   padding: 16px;
   text-align: center;
-  width: 60vh;
   box-shadow: 0 4px 6px $box-shadow;
   transition: box-shadow 0.3s;
   display: flex;
@@ -41,6 +40,18 @@ $card-border: #ddd;
     margin-bottom: 16px;
   }
 
+  &--small {
+    align-self: center;
+    width: 60vh;
+  }
+  &--medium {
+    justify-self: center;
+    width: 61%;
+  }
+  &--large {
+
+  }
+
   button {
     align-self: center;
   }
@@ -48,4 +59,12 @@ $card-border: #ddd;
 
 img {
   height: 15em;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    &--medium {
+      width: 90%;
+    }
+  }
 }

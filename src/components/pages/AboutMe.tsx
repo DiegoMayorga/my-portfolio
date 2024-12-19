@@ -1,34 +1,26 @@
 import "../../styles/pages/aboutme.scss";
 import Card from "../organisms/Card";
-import { PERSONAL_INFO } from "../../data/data";
+import { MEDIUM_CARD_INFO, SMALL_CARD_INFO } from "../../data/data";
+import { useState } from "react";
 
 const Home: React.FC = () => {
+  const [selectedTopic, setselectedTopic] = useState("");
+
   const handleButtonClick = (buttonPressed: string) => {
-    alert(buttonPressed);
+    setselectedTopic(buttonPressed);
   };
 
   return (
     <div>
       <h1>About me</h1>
       <div className="about-me">
-        <Card
-          {...PERSONAL_INFO[0]}
-          buttonLabel="My Curriculum"
-          buttonVariant="primary"
-          onButtonClick={() => handleButtonClick("my-cv")}
-        />
-        {/* <Card
-          {...PERSONAL_INFO[1]}
-          buttonLabel="Work experience"
-          buttonVariant="primary"
-          onButtonClick={() => handleButtonClick("experience")}
-        />
-        <Card
-          {...PERSONAL_INFO[1]}
-          buttonLabel="Studies"
-          buttonVariant="primary"
-          onButtonClick={() => handleButtonClick("studies")}
-        /> */}
+        {SMALL_CARD_INFO.map((cardInfo) => (
+          <Card
+            key={cardInfo.id}
+            {...cardInfo}
+            onButtonClick={() => handleButtonClick(cardInfo.id)}
+          />
+        ))}
       </div>
     </div>
   );
