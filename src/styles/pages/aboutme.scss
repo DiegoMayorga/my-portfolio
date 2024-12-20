@@ -1,17 +1,4 @@
-.about-me {
-  display: flex;
-  align-content: center;
-}
-
 h1 {
   margin: 20px 0 0;
   justify-self: center;
-}
-
-@media (max-width: 1200px) {
-  .about-me {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-  }
 }

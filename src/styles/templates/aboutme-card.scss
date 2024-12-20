@@ -1,0 +1,12 @@
+.about-me {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .about-me {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
