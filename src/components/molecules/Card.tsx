@@ -1,4 +1,4 @@
-import "../../styles/organisms/card.scss";
+import "../../styles/molecules/card.scss";
 import Button from "../atoms/Button";
 
 interface CardProps {

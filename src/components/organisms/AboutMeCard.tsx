@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SMALL_CARD_INFO, MEDIUM_CARD_INFO } from "../../data/data";
-import Card from "../organisms/Card";
+import Card from "../molecules/Card";
 import "../../styles/templates/aboutme-card.scss";
 
 const AboutMeCard: React.FC = () => {
