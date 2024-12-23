@@ -1,15 +1,23 @@
 import "../../styles/pages/aboutme.scss";
-// import AboutMeCard from "../templates/AboutMeCard";
+import Section from "../molecules/Section";
+import Title from "../atoms/Title";
+import AboutMeCard from "../organisms/AboutMeCard";
+import Divider from "../atoms/Divider";
 
-const Home: React.FC = () => {
+const AboutMe: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>About me</h1>
-      </header>
-      {/*       <AboutMeCard /> */}
+      <Title title="About me" />
+      <Divider />
+      <div className="sections">
+        <Section title="hola" description="hola">
+          <AboutMeCard item={0} />
+          <AboutMeCard item={1} />
+        </Section>
+        <Section title="hola" description="hola"></Section>
+      </div>
     </>
   );
 };
 
-export default Home;
+export default AboutMe;

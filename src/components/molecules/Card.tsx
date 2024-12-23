@@ -5,7 +5,7 @@ interface CardProps {
   title: string;
   description: string;
   image?: string;
-  cardSize?: 'small' | 'medium' | 'large';
+  cardSize?: "small" | "medium" | "large";
   buttonLabel?: string;
   buttonVariant?: "primary" | "secondary" | "danger";
   onButtonClick?: () => void;
@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({
   title,
   description,
   image,
-  cardSize = 'small',
+  cardSize = "small",
   buttonLabel,
   buttonVariant = "primary",
   onButtonClick,
@@ -26,9 +26,11 @@ const Card: React.FC<CardProps> = ({
       <h4 className="card__title">{title}</h4>
       <p className="card__description">{description}</p>
       {buttonLabel && (
-        <Button variant={buttonVariant} onClick={onButtonClick}>
-          {buttonLabel}
-        </Button>
+        <Button
+          variant={buttonVariant}
+          onClick={onButtonClick}
+          text={buttonLabel}
+        />
       )}
     </div>
   );

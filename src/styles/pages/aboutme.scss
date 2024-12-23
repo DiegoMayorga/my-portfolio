@@ -1,4 +1,13 @@
 h1 {
-  margin: 20px 0 0;
+  margin: 20px 0 30px;
   justify-self: center;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,5 +1,7 @@
 import "../../styles/pages/calculator.scss";
 import { useState } from "react";
+import Divider from "../atoms/Divider";
+import Title from "../atoms/Title";
 
 const Calculator = () => {
   const [num1, setNum1] = useState<number | "">("");
@@ -78,71 +80,75 @@ const Calculator = () => {
   const isOperationDisabled = num1 === "" || num2 === "" || error != null;
 
   return (
-    <div className="calculator">
-      <div className="container">
-        <form>
-          <p>Type a number</p>
-          <input
-            type="text"
-            placeholder="Type a number"
-            value={num1 === "" ? "" : num1}
-            onChange={handleChangeNum1}
-            aria-label="First number"
-          />
-          <p>Type another number</p>
-          <input
-            type="text"
-            placeholder="Type another number"
-            value={num2 === "" ? "" : num2}
-            onChange={handleChangeNum2}
-            aria-label="Second number"
-          />
-          {error && (
-            <p className="error" role="alert">
-              {error}
+    <>
+      <Title title="Calculator" />
+      <Divider />
+      <div className="calculator">
+        <div className="container">
+          <form>
+            <p>Type a number</p>
+            <input
+              type="text"
+              placeholder="Type a number"
+              value={num1 === "" ? "" : num1}
+              onChange={handleChangeNum1}
+              aria-label="First number"
+            />
+            <p>Type another number</p>
+            <input
+              type="text"
+              placeholder="Type another number"
+              value={num2 === "" ? "" : num2}
+              onChange={handleChangeNum2}
+              aria-label="Second number"
+            />
+            {error && (
+              <p className="error" role="alert">
+                {error}
+              </p>
+            )}
+            <p>
+              {result !== null
+                ? `The result is: ${result}`
+                : "Click on a button to know the result."}
             </p>
-          )}
-          <p>
-            {result !== null
-              ? `The result is: ${result}`
-              : "Click on a button to know the result."}
-          </p>
-          <div className="buttons">
-            <button
-              type="button"
-              onClick={() => handleOperation("+")}
-              disabled={isOperationDisabled}
-            >
-              +
+            <div className="buttons">
+              <button
+                type="button"
+                onClick={() => handleOperation("+")}
+                disabled={isOperationDisabled}
+              >
+                +
+              </button>
+              <button
+                type="button"
+                onClick={() => handleOperation("*")}
+                disabled={isOperationDisabled}
+              >
+                x
+              </button>
+              <button
+                type="button"
+                onClick={() => handleOperation("-")}
+                disabled={isOperationDisabled}
+              >
+                -
+              </button>
+              <button
+                type="button"
+                onClick={() => handleOperation("/")}
+                disabled={isOperationDisabled}
+              >
+                /
+              </button>
+            </div>
+            <button type="button" onClick={handleClear} className="clear-btn">
+              Clear
             </button>
-            <button
-              type="button"
-              onClick={() => handleOperation("*")}
-              disabled={isOperationDisabled}
-            >
-              x
-            </button>
-            <button
-              type="button"
-              onClick={() => handleOperation("-")}
-              disabled={isOperationDisabled}
-            >
-              -
-            </button>
-            <button
-              type="button"
-              onClick={() => handleOperation("/")}
-              disabled={isOperationDisabled}
-            >
-              /
-            </button>
-          </div>
-          <button type="button" onClick={handleClear} className="clear-btn">
-            Clear
-          </button>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

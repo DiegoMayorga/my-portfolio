@@ -2,7 +2,7 @@ $footer-background: #000;
 $footer-text: #fff;
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   color: $footer-text;
   background-color: $footer-background;
