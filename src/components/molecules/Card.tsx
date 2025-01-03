@@ -3,7 +3,7 @@ import Button from "../atoms/Button";
 
 interface CardProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   image?: string;
   cardSize?: "small" | "medium" | "large";
   buttonLabel?: string;
@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className={`card card--${cardSize}`}>
-      <img src={image} alt={title} className="card__image" />
+      {image && <img src={image} alt={title} className="card__image" />}
       <h4 className="card__title">{title}</h4>
       <p className="card__description">{description}</p>
       {buttonLabel && (

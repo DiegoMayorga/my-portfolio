@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar: React.FC = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <ul>
         <li>
           <NavLink
@@ -30,8 +30,16 @@ const NavBar: React.FC = () => {
             Game
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact
+          </NavLink>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

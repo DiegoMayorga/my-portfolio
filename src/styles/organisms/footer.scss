@@ -8,3 +8,13 @@ footer {
   background-color: $footer-background;
   width: 100%;
 }
+
+ol {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+
+}

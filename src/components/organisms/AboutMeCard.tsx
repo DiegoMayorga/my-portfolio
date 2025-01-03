@@ -16,7 +16,7 @@ const AboutMeCard: React.FC<CardInfo> = ({ item }) => {
 
   return (
     <div className="about-me">
-      {selectedTopic === "about-me" ? (
+      {selectedTopic === "about-me" || selectedTopic === "experience" ? (
         <Card
           cardSize="medium"
           {...MEDIUM_CARD_INFO[`${item}`]}

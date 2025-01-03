@@ -2,6 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Calculator from "../components/pages/Calculator";
 import Game from "../components/pages/Game";
 import Home from "../components/pages/AboutMe";
+import Contact from "../components/pages/Contact";
 
 interface RouteConfig {
   path: string;
@@ -15,6 +16,7 @@ const routeConfig: RouteConfig[] = [
   { path: "/aboutme", element: <Home /> },
   { path: "/calculator", element: <Calculator /> },
   { path: "/game", element: <Game /> },
+  { path: "/contact", element: <Contact /> },
 ];
 
 const AppRoutes: React.FC = () => {

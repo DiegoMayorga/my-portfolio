@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <ul>
+        <ol>
           <li>
-            Built by Diego Mayorga using <a href="https://www.react.dev/">React</a>
+            Built by Diego Mayorga using <a href="https://www.react.dev/" target="_blank" rel="noreferrer">React</a>
           </li>
           <li>asd</li>
-        </ul>
+        </ol>
       </footer>
     </>
   );
